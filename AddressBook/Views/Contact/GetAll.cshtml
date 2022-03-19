@@ -1,0 +1,34 @@
+﻿@model List<AddressBook.Models.Contact>
+@{
+    ViewBag.Title = "All Contacts";
+}
+<br>
+<h3 class="text-success">@ViewData["Title"] </h3>
+<div class="card-body">
+    <table class="table table-hover table-responsive text-nowrap">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Full Name</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Physical Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink($"{item.Id}","GetSingle",new {id=item.Id })
+                    </td>
+                    <td>@item.FullName</td>
+                    <td>@item.EmailAddress</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.PhysicalAddress</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

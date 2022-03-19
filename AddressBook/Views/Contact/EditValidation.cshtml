@@ -1,0 +1,15 @@
+﻿@model AddressBook.Models.Contact
+@{
+    ViewBag.Title = "EditValidation";
+}
+
+<br>
+<br>
+<div class="btn-danger">
+    <h3 class="danger">@ViewBag.ServerSideValidation</h3>
+</div>
+<div class="row">
+   <h4>@Html.ActionLink("Try Again", "Edit", new { Id = Model.Id, FullName = Model.FullName, EmailAddress = Model.EmailAddress, PhoneNumber = Model.PhoneNumber, PhysicalAddress = Model.PhysicalAddress })</h4>
+</div>
+
+
