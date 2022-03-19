@@ -20,7 +20,7 @@
             {
                 <tr>
                     <td>
-                        @Html.ActionLink($"{item.Id}","GetSingle",new {id=item.Id })
+                        @Html.ActionLink(item.Id.ToString(),"GetSingle",new {id=item.Id })
                     </td>
                     <td>@item.FullName</td>
                     <td>@item.EmailAddress</td>
