@@ -10,12 +10,10 @@ using System.Web.Mvc;
 
 namespace AddressBook.Controllers
 {
-    //try catch block all actions from repositories
-    //and write client validations
     public class ContactController : Controller
     {
         private IContactFactory _contactFactory;
-        public ContactController(IContactFactory contactFactory) 
+        public ContactController(IContactFactory contactFactory)
         {
             _contactFactory = contactFactory;
         }
@@ -79,7 +77,7 @@ namespace AddressBook.Controllers
             catch (Exception ex)
             {
                 ViewBag.ServerSideValidation = ex.Message;
-                return View("EditValidation",contact);
+                return View("EditValidation", contact);
             }
             return RedirectToAction("GetAll");
         }

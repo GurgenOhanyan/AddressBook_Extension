@@ -2,10 +2,14 @@
 @{
     ViewBag.Title = "Edit";
 }
+
+
+<script src="~/Scripts/validation.js" type="text/javascript"></script>
+
 <br>
 <h4 class="text-success">Edit</h4>
 <br>
-@using (Html.BeginForm("EditPost","Contact"))
+@using (Html.BeginForm("EditPost", "Contact"))
 {
     <div class="row">
         <div class="col-md-4">
@@ -17,7 +21,8 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="emailAddress">Email Address </label>
-                <input class="form-control required" name="emailAddress" id="email" value="@Model.EmailAddress" />
+                <input class="form-control required" name="emailAddress" id="email" value="@Model.EmailAddress" oninput="ValidateEmailForEdit()" />
+                <label style="background-color:red" id="emailValidate"></label>
             </div>
         </div>
         <div class="col-md-4">
@@ -31,7 +36,8 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="phoneNumber">Phone Number</label>
-                <input class="form-control required" name="phoneNumber" id="phoneNumber" value="@Model.PhoneNumber" />
+                <input class="form-control required" name="phoneNumber" id="phone" value="@Model.PhoneNumber" oninput="ValidatePhoneForEdit()" />
+                <label style="background-color:red" id="phoneValidate"></label>
             </div>
         </div>
         <div class="col-md-4">
@@ -44,5 +50,6 @@
     <div class="form-group">
         <input id="edit" name="edit" type="submit" class="btn-success" value="Edit" style="bottom: 0;right: 0;" />
     </div>
+
 }
 

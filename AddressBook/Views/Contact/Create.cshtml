@@ -1,9 +1,12 @@
-﻿@model AddressBook.Models.Contact
+﻿@model  AddressBook.Models.Contact
 @{
     ViewBag.Title = "Create";
 }
+
+<script src="~/Scripts/validation.js" type="text/javascript"></script>
+
 <br>
-<h4 class="text-success">Create new Contact</h4>
+<h4 class="text-success">Create New Contact</h4>
 <br>
 <form method="post">
     <div class="row">
@@ -16,8 +19,8 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="emailAddress">Email Address </label>
-                <input class="form-control required" name="emailAddress" id="email" />
-                @Html.ValidationMessageFor(m => m.EmailAddress, "", new { @class = "text-danger" })
+                <input class="form-control required" name="emailAddress" id="email" oninput="ValidateEmail()" />
+                <label style="background-color:red"  id="emailValidate"></label>
             </div>
         </div>
 
@@ -26,7 +29,8 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="phoneNumber">Phone Number</label>
-                <input class="form-control required" name="phoneNumber" id="phoneNumber" />
+                <input class="form-control required" name="phoneNumber" id="phone" oninput="ValidatePhone()" />
+                <label style="background-color:red"  id="phoneValidate"></label>
             </div>
         </div>
         <div class="col-md-4">
@@ -40,4 +44,3 @@
         <input id="create" name="Create" type="submit" class="btn-success" value="Create" style="bottom: 0;right: 0;" />
     </div>
 </form>
-

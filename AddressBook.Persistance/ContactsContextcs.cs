@@ -12,6 +12,7 @@ namespace AddressBook.Persistance
     public class ContactsContext : System.Data.Entity.DbContext
     {
         public System.Data.Entity.DbSet<Contact> Contacts { get; set; }
+
         public ContactsContext(string conectionString)
         {
             Database.Connection.ConnectionString = conectionString;
@@ -25,7 +26,7 @@ namespace AddressBook.Persistance
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Contact>()
-                .Property(p => p.PhysicalAddress).HasMaxLength(40);
+                .Property(p => p.PhysicalAddress).HasMaxLength(50);
         }
     }
 }
