@@ -6,20 +6,21 @@
 <script src="~/Scripts/validation.js" type="text/javascript"></script>
 
 <br>
-<h4 class="text-success">Create New Contact</h4>
+<h4 class="text-success">Create New </h4>
 <br>
 <form method="post">
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
                 <label for="fullName">Full Name </label>
-                <input class="form-control required" name="fullName" id="fullName" />
+                <input class="form-control" name="fullName" id="name" oninput="ValidateName()" />
+                <label style="background-color:red" id="nameValidate"></label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="emailAddress">Email Address </label>
-                <input class="form-control required" name="emailAddress" id="email" oninput="ValidateEmail()" />
+                <input class="form-control " name="emailAddress" id="email" oninput="ValidateEmail()" />
                 <label style="background-color:red"  id="emailValidate"></label>
             </div>
         </div>

@@ -17,6 +17,7 @@ namespace AddressBook.Domain.Entities
         [EmailAddress]
         public string EmailAddress { get; set; }
         [Required]
+        [Phone]
         public string PhoneNumber { get; set; }
         public string PhysicalAddress { get; set; }
     }

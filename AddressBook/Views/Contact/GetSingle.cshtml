@@ -3,31 +3,49 @@
     ViewBag.Title = "GetSingle";
 }
 <br>
-<h4 class="text-success">@Model.FullName's page </h4>
+<h4 style="font-size:xx-large">@Model.FullName's page </h4>
 <br>
-<dl class="row">
-    <dt class="col">FullName</dt>
-    <dd class="col">@Model.FullName</dd>
-</dl>
-<dl class="row">
-    <dt class="col">Email Address</dt>
-    <dd class="col">@Model.EmailAddress</dd>
-</dl>
-<dl class="row">
-    <dt class="col">Phone Number</dt>
-    <dd class="col">@Model.PhoneNumber</dd>
-</dl>
-<dl class="row">
-    <dt class="col">Physical Address</dt>
-    <dd class="col">@Model.PhysicalAddress</dd>
-</dl>
+<br>
 <div class="row">
-    @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+    <div class="col-md-2">
+        <label style="font-size:medium">FullName:</label>
+    </div>
+    <div class="col-md-2">
+        <label style="font-size:medium">@Model.FullName</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <label style="font-size:medium">Email Address:</label>
+    </div>
+    <div class="col-md-2">
+        <label style="font-size:medium">@Model.EmailAddress</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <label style="font-size:medium">Phone Number:</label>
+    </div>
+    <div class="col-md-2">
+        <label style="font-size:medium">@Model.PhoneNumber</label>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <label style="font-size:medium">Physical Address:</label>
+    </div>
+    <div class="col-md-2">
+        <label style="font-size:medium">@Model.PhysicalAddress</label>
+    </div>
 </div>
 <br>
 <div class="row">
-    @Html.ActionLink("Edit", "Edit", new { Id = Model.Id, FullName = Model.FullName, EmailAddress = Model.EmailAddress, PhoneNumber = Model.PhoneNumber, PhysicalAddress = Model.PhysicalAddress })
+    <div class="col-md-1">
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+    </div>
+    <div class="col-md-1">
+        @Html.ActionLink("Edit", "Edit", new { Id = Model.Id, FullName = Model.FullName, EmailAddress = Model.EmailAddress, PhoneNumber = Model.PhoneNumber, PhysicalAddress = Model.PhysicalAddress })
+    </div>
 </div>
-<br>
 <br>
 <br>

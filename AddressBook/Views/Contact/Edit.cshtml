@@ -15,20 +15,21 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="fullName">Full Name </label>
-                <input class="form-control required" name="fullName" id="fullName" value="@Model.FullName" />
+                <input class="form-control required" name="fullName" id="nameEdit" value="@Model.FullName" oninput="ValidateNameForEdit()" />
+                <label style="background-color:red" id="nameValidateEdit"></label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="emailAddress">Email Address </label>
-                <input class="form-control required" name="emailAddress" id="email" value="@Model.EmailAddress" oninput="ValidateEmailForEdit()" />
-                <label style="background-color:red" id="emailValidate"></label>
+                <input class="form-control required" name="emailAddress" id="emailEdit" value="@Model.EmailAddress" oninput="ValidateEmailForEdit()" />
+                <label style="background-color:red" id="emailValidateEdit"></label>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="id"></label>
-                <input class="form-control required" name="id" id="id" value="@Model.Id" type="hidden" />
+                <input class="required" name="id" id="id" value="@Model.Id" type="hidden" />
             </div>
         </div>
     </div>
@@ -36,8 +37,8 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="phoneNumber">Phone Number</label>
-                <input class="form-control required" name="phoneNumber" id="phone" value="@Model.PhoneNumber" oninput="ValidatePhoneForEdit()" />
-                <label style="background-color:red" id="phoneValidate"></label>
+                <input class="form-control required" name="phoneNumber" id="phoneEdit" value="@Model.PhoneNumber" oninput="ValidatePhoneForEdit()" />
+                <label style="background-color:red" id="phoneValidateEdit"></label>
             </div>
         </div>
         <div class="col-md-4">
