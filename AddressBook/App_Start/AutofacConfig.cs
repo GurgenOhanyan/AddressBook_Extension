@@ -39,7 +39,9 @@ namespace AddressBook.App_Start
             builder.RegisterType<ContactController>();
             builder.RegisterType<ContactFactory>().As<IContactFactory>();
             builder.RegisterType<ContactService>().As<IContactService>();
-            builder.Register(c => new ContactRepository(new Persistance.ContactsContext(connectionString))).As<IRepository>();
+            builder.RegisterType<ContactRepository>().As<IRepository>().InstancePerLifetimeScope();
+            builder.Register(dbcontext => new Persistance.ContactsContext(connectionString)).InstancePerLifetimeScope();
+
             Container = builder.Build();
             return Container;
         }

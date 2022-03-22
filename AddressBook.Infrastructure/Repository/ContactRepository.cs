@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace AddressBook.Infrastructure.Repository
 {
-    public class ContactRepository :IRepository
+    public class ContactRepository : IRepository
     {
+
         private ContactsContext _bookContext;
         public ContactRepository(ContactsContext bookContext)
         {
@@ -22,10 +23,11 @@ namespace AddressBook.Infrastructure.Repository
         {
             try
             {
+
                 _bookContext.Contacts.Add(entity);
                 await _bookContext.SaveChangesAsync();
             }
-            catch (Exception )
+            catch (Exception)
             {
                 throw new Exception("There are incorrectly entered values");
             }
@@ -61,7 +63,7 @@ namespace AddressBook.Infrastructure.Repository
                 contact.PhysicalAddress = entity.PhysicalAddress;
                 await _bookContext.SaveChangesAsync();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw new Exception("These changes can not be saved as there is a breach of validity");
             }
