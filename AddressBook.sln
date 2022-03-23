@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Web", "AddressBook\AddressBook.Web.csproj", "{5A411295-D7E7-428D-A575-BED3260C8D7C}"
 EndProject
@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Instruction", "Instruction"
 	ProjectSection(SolutionItems) = preProject
 		Instruction.txt = Instruction.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C8400759-D6D1-494E-9CE9-DE085112B41B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryTests", "FactoryTests\FactoryTests.csproj", "{AE97915B-E9CC-4A45-B7C5-C5324D388120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,9 +48,16 @@ Global
 		{5C431E94-24DB-453E-BF1A-E338BDCA4CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C431E94-24DB-453E-BF1A-E338BDCA4CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C431E94-24DB-453E-BF1A-E338BDCA4CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE97915B-E9CC-4A45-B7C5-C5324D388120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE97915B-E9CC-4A45-B7C5-C5324D388120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE97915B-E9CC-4A45-B7C5-C5324D388120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE97915B-E9CC-4A45-B7C5-C5324D388120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE97915B-E9CC-4A45-B7C5-C5324D388120} = {C8400759-D6D1-494E-9CE9-DE085112B41B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1234FCD1-F5B8-422A-8CE6-800619F95C7A}
